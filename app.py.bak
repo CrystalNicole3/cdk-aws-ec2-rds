@@ -1,0 +1,14 @@
+import aws_cdk as cdk
+from cdk_iac_project.stacks.network_stack import NetworkStack
+from cdk_iac_project.stacks.server_stack import ServerStack
+
+app = cdk.App()
+
+# Instantiate network stack first
+network = NetworkStack(app, "NetworkStack")
+
+# Instantiate server stack, passing the VPC and bastion security group from the network stack
+ServerStack(app, "ServerStack", vpc=network.vpc, bastion_sg=network.bastion_sg)
+
+app.synth()
+

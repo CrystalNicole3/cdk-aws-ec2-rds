@@ -1,0 +1,20 @@
+{
+  "version": "48.0.0",
+  "files": {
+    "2f2003e58ea65315d5fee88cfd109d373112e1d44fbcb0b3cec3f3b2533f20b0": {
+      "displayName": "ServerStack Template",
+      "source": {
+        "path": "ServerStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region-21436f4a": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "2f2003e58ea65315d5fee88cfd109d373112e1d44fbcb0b3cec3f3b2533f20b0.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
